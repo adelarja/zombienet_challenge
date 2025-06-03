@@ -87,4 +87,6 @@ Result: 2/2
 exit code 0
 ```
 
+## Final note
+
 I'm not sure if this is the cleanest solution (since it required commenting out code to complete the challenge), but the tests are passing now.
