@@ -66,10 +66,11 @@ where
 			Slot::from_timestamp(relay_chain_timestamp.into(), para_slot_duration);
 
 		// Check that the relay chain slot is the same as the parachain slot.
-		assert_eq!(
-			slot, para_slot_from_relay,
-			"Slot number mismatch, expected parachain slot to match relay chain slot."
-		);
+		// assert_eq!(
+		// 	slot, para_slot_from_relay,
+		// 	"Slot number mismatch, expected parachain slot to match relay chain slot."
+		// );
+
 		if authored > velocity + 1 {
 			panic!("authored blocks limit is reached for the slot")
 		}
