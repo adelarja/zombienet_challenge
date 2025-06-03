@@ -66,9 +66,9 @@ The following assertion is not being satisfied:
 
 ```rust
 assert_eq!(
-			slot, para_slot_from_relay,
-			"Slot number mismatch, expected parachain slot to match relay chain slot."
-		);
+	slot, para_slot_from_relay,
+	"Slot number mismatch, expected parachain slot to match relay chain slot."
+);
 ```
 
 When I commented out that code, the node started finalizing blocks without failing, and the tests passed. These are the logs from the Zombienet window:
