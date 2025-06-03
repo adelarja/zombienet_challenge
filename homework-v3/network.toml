@@ -1,0 +1,26 @@
+[relaychain]
+default_command = "polkadot"
+chain = "rococo-local"
+
+  [[relaychain.nodes]]
+  name = "alice"
+  validator = true
+
+  [[relaychain.nodes]]
+  name = "bob"
+  validator = true
+
+# Configuration for parachains
+[[parachains]]
+id = 2000
+cumulus_based = true
+chain = "local"
+
+  # Let charlie produce parachain blocks.
+  [[parachains.collators]]
+  name = "charlie"
+  # Should produce blocks.
+  validator = true
+  command = "parachain-template-node"
+  # Enable aura::cumulus log level `info`
+  args = ["--log aura::cumulus=info", "--force-authoring"]

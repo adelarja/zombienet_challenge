@@ -1,0 +1,6 @@
+Description: Parachain node produces blocks
+Network: ./network.toml
+Creds: config
+
+alice: parachain 2000 is registered within 225 seconds
+charlie: reports block height is at least 10 within 300 seconds
